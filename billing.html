@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing - Hospital Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background-image: ;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Hospital Management</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="billing.html">Billing</a></li>
+                <li class="nav-item"><a class="nav-link" href="appointments.html">Appointments</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Hospital</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Billing</h2>
+        <form action="php/billing.php" method="post">
+            <div class="form-group">
+                <label for="patientName">Patient Name</label>
+                <input type="text" class="form-control" id="patientName" name="patientName" placeholder="Enter patient name" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Service</label>
+                <input type="text" class="form-control" id="service" name="service" placeholder="Enter service provided" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter amount" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
