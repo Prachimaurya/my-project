@@ -1,0 +1,87 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+/* Carousel Container: Sets the visible window */
+.carousel-container {
+    max-width: 900px; /* Adjust this to your desired carousel width */
+    margin: 0 auto;
+    position: relative; 
+    overflow: hidden; /* CRITICAL: Hides the slides that are off-screen */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide Wrapper: The moving track that holds ALL slides */
+.carousel-slide-wrapper {
+    display: flex; /* CRITICAL: Puts all slides in a horizontal row */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%; /* CRITICAL: Ensures each slide takes the full width */
+    box-sizing: border-box; 
+    flex-shrink: 0; /* Prevents slides from shrinking */
+}
+
+.slide img {
+    width: 100%;
+    height: auto; 
+    display: block; 
+    object-fit: cover;
+    max-height: 400px; /* Optional: set a max height for consistent banners */
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10; 
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+/* Dots/Indicators */
+.carousel-dots {
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background-color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333; 
+}
